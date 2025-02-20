@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover interesting articles and insights on our blog">
+    <meta name="keywords" content="blog, articles, insights, news">
+    <title>My Blog - Latest Articles and Insights</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo-link">
+                <h1>My Blog</h1>
+            </a>
+            <div class="nav-right">
+                <div class="nav-features">
+                    <div class="reading-stats" title="Reading time">
+                        <i class="fas fa-book-reader"></i>
+                        <span id="readingTime">0 min read</span>
+                    </div>
+                    <div class="weather-widget" title="Local weather">
+                        <i class="fas fa-cloud-sun"></i>
+                        <span id="weatherInfo">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </div>
+                </div>
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <span>Theme</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="filters-container">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search blogs...">
+            </div>
+            <div class="categories-container">
+                <select id="categoryFilter" class="category-select">
+                    <option value="all">Category </option>
+                    <option value="childhood">Childhood</option>
+                    <option value="travel">Travel</option>
+                    <option value="life-lessons">Life Lessons</option>
+                    <option value="relationships">Relationships</option>                    <option value="personal">Personal</option>
+                    <option value="daily">Daily Life</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="ad-space">
+            <!-- AdSense Ad Unit -->
+            <div id="header-ad"></div>
+        </div>
+
+        <main>
+            <div id="blogList"></div>
+            
+            <div class="ad-space">
+                <!-- AdSense Ad Unit -->
+                <div id="content-ad"></div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Discover the latest insights and stories on our blog.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="/blog-website/privacy-policy.html">Privacy Policy</a>
+                <a href="/blog-website/terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Get in Touch</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> skaranpreet851@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9876243219</p>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

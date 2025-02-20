@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo-link">
+                <h1>My Blog</h1>
+            </a>
+            <div class="nav-right">
+                <div class="nav-features">
+                    <div class="reading-stats" title="Reading time">
+                        <i class="fas fa-book-reader"></i>
+                        <span id="readingTime">0 min read</span>
+                    </div>
+                    <div class="weather-widget" title="Local weather">
+                        <i class="fas fa-cloud-sun"></i>
+                        <span id="weatherInfo">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </div>
+                </div>
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <span>Theme</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <article id="blogPost">
+                <div class="post-header">
+                    <span id="postCategory" class="category-label"></span>
+                    <h1 id="postTitle"></h1>
+                    <div class="post-meta">
+                        <span id="postDate"></span>
+                        <span class="read-time"></span>
+                    </div>
+                </div>
+                <article id="postContent" class="post-content blog-text"></article>
+                <div class="post-footer">
+                    <div class="share-wrap">
+                        <button onclick="toggleShare(event)" class="share-btn">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                        <div id="shareMenu" class="share-menu">
+                            <a href="#" onclick="return sharePost('whatsapp')" class="share-item">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="#" onclick="return sharePost('facebook')" class="share-item">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </a>
+                            <a href="#" onclick="return sharePost('x')" class="share-item share-x">
+                                <img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNTAgNTAiIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjUwcHgiPjxwYXRoIGQ9Ik0gMTEgNCBDIDcuMTQ1NjY2MSA0IDQgNy4xNDU2NjYxIDQgMTEgTCA0IDM5IEMgNCA0Mi44NTQzMzQgNy4xNDU2NjYxIDQ2IDExIDQ2IEwgMzkgNDYgQyA0Mi44NTQzMzQgNDYgNDYgNDIuODU0MzM0IDQ2IDM5IEwgNDYgMTEgQyA0NiA3LjE0NTY2NjEgNDIuODU0MzM0IDQgMzkgNCBMIDExIDQgeiBNIDExIDYgTCAzOSA2IEMgNDEuNzczNjY2IDYgNDQgOC4yMjYzMzM5IDQ0IDExIEwgNDQgMzkgQyA0NCA0MS43NzM2NjYgNDEuNzczNjY2IDQ0IDM5IDQ0IEwgMTEgNDQgQyA4LjIyNjMzMzkgNDQgNiA0MS43NzM2NjYgNiAzOSBMIDYgMTEgQyA2IDguMjI2MzMzOSA4LjIyNjMzMzkgNiAxMSA2IHogTSAxMy4wODU5MzggMTMgTCAyMi4zMDg1OTQgMjYuMTAzNTE2IEwgMTMgMzcgTCAxNS41IDM3IEwgMjMuNDM3NSAyNy43MDcwMzEgTCAyOS45NzY1NjIgMzcgTCAzNy45MTQwNjIgMzcgTCAyNy43ODkwNjIgMjIuNjEzMjgxIEwgMzYgMTMgTCAzMy41IDEzIEwgMjYuNjYwMTU2IDIxLjAwOTc2NiBMIDIxLjAyMzQzOCAxMyBMIDEzLjA4NTkzOCAxMyB6IE0gMTYuOTE0MDYyIDE1IEwgMTkuOTc4NTE2IDE1IEwgMzQuMDg1OTM4IDM1IEwgMzEuMDIxNDg0IDM1IEwgMTYuOTE0MDYyIDE1IHoiLz48L3N2Zz4=" alt="X logo" class="x-logo"> Share on <strong>X</strong>
+                            </a>
+                            <a href="#" onclick="return sharePost('linkedin')" class="share-item">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                            <a href="#" onclick="return sharePost('copy')" class="share-item">
+                                <i class="fas fa-link"></i> Copy Link
+                            </a>
+                        </div>
+                    </div>
+                    <a href="index.html" class="back-link">← Back to Blog</a>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Discover the latest insights and stories on our blog.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="/blog-website/privacy-policy.html">Privacy Policy</a>
+                <a href="/blog-website/terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Get in Touch</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> skaranpreet851@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9876243219</p>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

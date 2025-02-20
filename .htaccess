@@ -1,0 +1,11 @@
+# Prevent directory listing
+Options -Indexes
+
+# Protect admin files
+<Files "admin.html">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Redirect all admin attempts to login
+RedirectMatch 403 ^/admin/?$

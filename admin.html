@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - New Blog Post</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo-link">
+                <h1>Admin Dashboard</h1>
+            </a>
+            <div class="nav-right">
+                <div class="nav-features">
+                    <div class="weather-widget" title="Local weather">
+                        <i class="fas fa-cloud-sun"></i>
+                        <span id="weatherInfo">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </div>
+                </div>
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <span>Theme</span>
+                </button>
+                <button onclick="logout()" class="logout-btn">Logout</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form id="blogForm">
+            <input type="text" id="title" placeholder="Blog Title" required>
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option value="childhood">Childhood Memories</option>
+                <option value="travel">Travel Stories</option>
+                <option value="life-lessons">Life Lessons</option>
+                <option value="relationships">Relationships</option>
+                <option value="personal">Personal Growth</option>
+                <option value="daily">Daily Life</option>
+            </select>
+            <textarea id="content" placeholder="Blog Content" required></textarea>
+            <button type="submit">Publish</button>
+        </form>
+    </main>
+    <script src="auth.js"></script>
+    <script>
+        // Check authentication on page load
+        checkAuth();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
